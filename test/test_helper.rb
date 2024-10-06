@@ -6,10 +6,6 @@ require 'active_support/core_ext/kernel/reporting'
 require 'active_model'
 require 'active_job'
 require 'rails'
-begin
-  require 'mongoid'
-rescue LoadError
-end
 
 module RailsAdmin
 end

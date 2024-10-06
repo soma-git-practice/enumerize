@@ -1,15 +1,12 @@
 # frozen_string_literal: true
 
 require 'active_record'
-require 'sequel'
 
 module EnumerizeExtention
   def self.included(base)
     case
     when base < ActiveRecord::Base
       base.extend Enumerize
-    when base < Sequel::Model
-      base.plugin :enumerize
     end
   end
 end
